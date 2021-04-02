@@ -1,44 +1,85 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
-import React from 'react';
-import {Container,Row,Col} from 'react-bootstrap';
-import SideNav from '../StaticNav/SideNav'
+import React,{useRef} from 'react';
+import {Container,Row,Col,Button} from 'react-bootstrap';
+import Particles from 'react-particles-js';
 import Display from '../Display/Display';
-import {BrowserRouter as Router,Switch,Route,Link,useParams} from 'react-router-dom';
+import {BrowserRouter as Router,Route,Link} from 'react-router-dom';
 import {Card,ListGroupItem,ListGroup} from 'react-bootstrap';
-
+import profileImage from '../images/profile.jpg';
 import './App.css';
 
+
+const particlesOptions = {
+  particles: {
+    number: {
+      value: 200,
+      density: {
+        enable: true,
+        value_area: 800
+      }
+    }
+  }
+}
+
 function App() {
- 
+  const profileRef = useRef();
+  const handleMouseEnter =(e)=>{
+    if(e.type === 'mouseenter'){
+      profileRef.current.classList.remove('profile');
+      profileRef.current.classList.add('profile-2');
+      console.log(profileRef.current.classList)
+    } 
+  }
+  const handleMouseExit = (e)=>{
+    if(e.type === 'mouseleave'){
+      profileRef.current.classList.remove('profile-2');
+      profileRef.current.classList.add('profile'); 
+    }
+  }
   return (
     <Router>
-    <Container>
+       <div className="">
+         <Particles className='particles'
+          params={particlesOptions}
+        />
+    <Container  fluid>
       <Row >
-        <Col className='justify-content-center'md={12} lg={4}>
-        <Card >
-        <Card.Img variant="top" src="holder.js/100px180?text=Image cap" />
-        <Card.Body>
-          <Card.Title>Card Title</Card.Title>
+        <Col md={12} lg={4} >
+        <Card className='profile-container'>
+          <div className='display'>
+        <Card.Img ref={profileRef} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseExit}className='profile' variant="top" src={profileImage} />
+        </div>
+        
+        <Card.Body style={{paddingTop:35+'px'}}>
+          <Card.Title>
+          <blockquote>
+        <p style={{color:'#f3f178d7'}}>Learn from yesterday, live for today, hope for tomorrow. 
+        The important thing is not to stop questioning.</p>
+        <cite style={{color:'#f3f178d7'}}>&mdash; Albert Einstein</cite>
+    </blockquote>
+          </Card.Title>
         </Card.Body>
       </Card>
-        <ListGroup className="list-group-flush text-center">
-          <ListGroupItem><Link to='/bio'>Bio</Link></ListGroupItem>
-          <ListGroupItem><Link to='/projects'>projects</Link></ListGroupItem>
-          <ListGroupItem><Link to='/contact'>contact</Link></ListGroupItem>
+        <ListGroup className="list-group-flush text-center pt-0">
+          <ListGroupItem className='profile-container'><Link style={{textDecoration:'none'}}to='/bio'>
+            <Button className='button' size="lg" block>Bio</Button>
+            </Link></ListGroupItem>
+          <ListGroupItem className='profile-container'><Link style={{textDecoration:'none'}}to='/projects'>
+          <Button className='button' size="lg" block>projects</Button>
+            </Link></ListGroupItem>
+          <ListGroupItem className='profile-container'><Link style={{textDecoration:'none'}}to='/contact'>
+          <Button className='button'size="lg" block>Contact</Button>
+            </Link></ListGroupItem>
         </ListGroup>
-        <Switch>
-          
-          
-        </Switch>
-        
         </Col>
-        <Col md={12} lg={8}>
+        <Col md={12} lg={8} className='info-screen'>
         <Route exact path='/:display'>
             <Display/>
           </Route>
         </Col>
       </Row>
     </Container>
+    </div>
     </Router>
     
   );
