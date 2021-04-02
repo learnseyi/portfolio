@@ -7,11 +7,26 @@ import './Display.css'
 const Display = ()=>{
     const {display} =useParams();
     const data = display.charAt(0).toUpperCase()+ display.slice(1);
-    
-   let item = data === 'Bio'? <Bio/> : <h1>Hola</h1>
     return (
         <Card className='display-screen'style={{height:100+'vh'}}>
-            {item}
+        {(()=>{
+            switch(data){
+                case 'Bio':
+                    return(
+                        <Bio/> 
+                    )
+                case 'Projects':
+                    return(
+                            <h1>I am Projects</h1>
+                    )
+                case 'Contact':
+                    return(
+                            <h1>I am Contact</h1>
+                         
+                    )
+ }
+ 
+ })()}
         </Card>
         
         );

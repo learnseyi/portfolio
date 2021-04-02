@@ -27,7 +27,7 @@ function App() {
     if(e.type === 'mouseenter'){
       profileRef.current.classList.remove('profile');
       profileRef.current.classList.add('profile-2');
-      console.log(profileRef.current.classList)
+      
     } 
   }
   const handleMouseExit = (e)=>{
@@ -47,7 +47,13 @@ function App() {
         <Col md={12} lg={4} >
         <Card className='profile-container'>
           <div className='display'>
-        <Card.Img ref={profileRef} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseExit}className='profile' variant="top" src={profileImage} />
+        <Card.Img 
+        className='profile'
+        variant="top"
+        src={profileImage}
+        ref={profileRef} 
+        onMouseEnter={handleMouseEnter} 
+        onMouseLeave={handleMouseExit}/>
         </div>
         
         <Card.Body style={{paddingTop:35+'px'}}>
@@ -65,7 +71,7 @@ function App() {
             <Button className='button' size="lg" block>Bio</Button>
             </Link></ListGroupItem>
           <ListGroupItem className='profile-container'><Link style={{textDecoration:'none'}}to='/projects'>
-          <Button className='button' size="lg" block>projects</Button>
+          <Button className='button' size="lg" block>Projects</Button>
             </Link></ListGroupItem>
           <ListGroupItem className='profile-container'><Link style={{textDecoration:'none'}}to='/contact'>
           <Button className='button'size="lg" block>Contact</Button>
