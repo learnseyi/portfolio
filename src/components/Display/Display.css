@@ -1,4 +1,5 @@
 .display-screen {
   background-color: rgba(242, 245, 197, 0.5);
   border: none;
+  overflow-y: scroll;
 }

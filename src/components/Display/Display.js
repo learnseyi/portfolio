@@ -1,7 +1,8 @@
 import React from 'react';
 import {Card}from 'react-bootstrap';
 import {useParams} from 'react-router-dom';
-import Bio from '../Bio/Bio';
+import Biodata from '../Biodata/Biodata';
+import Contact from '../Contact/Contact';
 import './Display.css'
 
 const Display = ()=>{
@@ -13,15 +14,15 @@ const Display = ()=>{
             switch(data){
                 case 'Bio':
                     return(
-                        <Bio/> 
+                        <Biodata/> 
                     )
                 case 'Projects':
                     return(
-                            <h1>I am Projects</h1>
+                            <h1>I am Project</h1>
                     )
                 case 'Contact':
                     return(
-                            <h1>I am Contact</h1>
+                            <Contact/>
                          
                     )
  }
