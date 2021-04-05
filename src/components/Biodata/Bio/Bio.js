@@ -14,7 +14,7 @@ const Bio = ()=>{
                         <Col>
                         <ul>
                             <li><FaUserAlt/> &nbsp; &nbsp; Seyi Agboola</li>
-                            <li><FaEnvelopeOpenText/> &nbsp; &nbsp; contactseyi@gmail.com</li>
+                            <li><FaEnvelopeOpenText/> &nbsp; &nbsp; contactseyi43@gmail.com</li>
                             <li><FaPhone/> &nbsp; &nbsp; on request</li>
                         </ul>
                         </Col>
