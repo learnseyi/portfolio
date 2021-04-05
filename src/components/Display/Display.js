@@ -13,10 +13,6 @@ const Display = ({isLoading})=>{
         <Card className='display-screen'style={{height:100+'vh'}}>
         {(()=>{
             switch(data){
-                case 'Bio':
-                    return(
-                       isLoading ?  <Spinner className='spinner'animation="border" variant="primary" size='md'/> : <Biodata/>
-                    )
                 case 'Projects':
                     return(
                         isLoading ? <Spinner className='spinner'animation="border" variant="primary" size='md'/> :<Gallery/>

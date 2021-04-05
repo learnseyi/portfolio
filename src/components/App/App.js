@@ -6,7 +6,9 @@ import Display from '../Display/Display';
 import {BrowserRouter as Router,Route,Link} from 'react-router-dom';
 import {Card,ListGroupItem,ListGroup} from 'react-bootstrap';
 import profileImage from '../images/profile.jpg';
+import Biodata from '../Biodata/Biodata';
 import './App.css';
+
 
 
 const particlesOptions = {
@@ -77,7 +79,7 @@ const App = ()=> {
         </Card.Body>
       </Card>
         <ListGroup className="list-group-flush text-center pt-0">
-          <ListGroupItem className='profile-container'><Link style={{textDecoration:'none'}}to='/bio'>
+          <ListGroupItem className='profile-container'><Link style={{textDecoration:'none'}}to='/'>
             <Button onClick={loader}className='button' size="lg" block>Bio</Button>
             </Link></ListGroupItem>
           <ListGroupItem className='profile-container'><Link style={{textDecoration:'none'}}to='/projects'>
@@ -89,6 +91,7 @@ const App = ()=> {
         </ListGroup>
         </Col>
         <Col md={12} lg={8} className='info-screen'>
+          <Route exact path='/' component={Biodata}/>
         <Route exact path='/:display' render={props => <Display isLoading={isLoading}/> }/>
             
           
