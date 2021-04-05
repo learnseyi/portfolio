@@ -1,11 +1,12 @@
 import React from 'react';
-import {Card}from 'react-bootstrap';
+import {Card,Spinner}from 'react-bootstrap';
 import {useParams} from 'react-router-dom';
 import Biodata from '../Biodata/Biodata';
 import Contact from '../Contact/Contact';
+import Gallery from '../ProjectGallery/Gallery';
 import './Display.css'
 
-const Display = ()=>{
+const Display = ({isLoading})=>{
     const {display} =useParams();
     const data = display.charAt(0).toUpperCase()+ display.slice(1);
     return (
@@ -14,17 +15,20 @@ const Display = ()=>{
             switch(data){
                 case 'Bio':
                     return(
-                        <Biodata/> 
+                       isLoading ?  <Spinner className='spinner'animation="border" variant="primary" size='md'/> : <Biodata/>
                     )
                 case 'Projects':
                     return(
-                            <h1>I am Project</h1>
+                        isLoading ? <Spinner className='spinner'animation="border" variant="primary" size='md'/> :<Gallery/>
                     )
                 case 'Contact':
                     return(
-                            <Contact/>
-                         
+                        isLoading ? <Spinner className='spinner'animation="border" variant="primary" size='md'/> : <Contact/>
                     )
+                default:
+                        return(
+                            isLoading ? <Spinner className='spinner'animation="border" variant="primary" size='md'/> : <Biodata/>
+                        )
  }
  
  })()}

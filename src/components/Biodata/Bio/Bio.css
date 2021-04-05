@@ -1,16 +1,17 @@
-/* body {
-  
-} */
 .heading {
   font-size: large;
 }
 .heading h1 {
   text-align: center;
-  /* text-decoration: underline; */
 }
 .heading li {
   list-style-type: none;
 }
 .heading h5 {
   padding-left: 10px;
+}
+.link {
+  /* font-size: medium; */
+  color: black;
+  display: inline;
 }

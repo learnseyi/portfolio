@@ -1,0 +1,13 @@
+.title li {
+  display: inline-block;
+  /* padding-right: 5px; */
+  /* line-height: 1.5px; */
+}
+.title h5 {
+  font-weight: 600;
+}
+.dates {
+  padding-left: 10rem;
+  font-style: italic;
+  font-size: medium;
+}

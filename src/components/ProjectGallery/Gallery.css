@@ -1,0 +1,50 @@
+.heading {
+  font-size: large;
+  padding-bottom: 20px;
+}
+.heading h1 {
+  text-align: center;
+}
+h4 {
+  text-align: center;
+  padding-top: 10px;
+}
+.gallery-container {
+  padding-top: 20px;
+}
+
+.img-style {
+  width: 100%;
+  transform: scale(1);
+  transition: scale 2s ease;
+}
+
+.img-style:hover {
+  transform: scale(2) translateX(23%);
+  transition: scale 2s ease;
+  z-index: 99;
+  display: flow-root;
+  position: absolute;
+  top: 150px;
+}
+.img-style-2 {
+  width: 100%;
+  transform: scale(1);
+  transition: scale 2s ease;
+}
+.img-style-2:hover {
+  transform: scale(2) translateX(-26%);
+  transition: scale 2s ease;
+  z-index: 99;
+  display: flow-root;
+  position: absolute;
+  top: 150px;
+}
+.button {
+  background: radial-gradient(circle at 50%, #2f1c53, #a46dff, #f3f178d7);
+  text-decoration: none;
+  transition: all 0.1s ease-in-out;
+}
+.button:active {
+  transform: translateY(4px);
+}
