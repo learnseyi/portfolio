@@ -27,7 +27,7 @@ const Contact = ()=>{
     const getEmail = (e)=> setEmail(e.target.value);
     const getMessage = (e)=> setMessage(e.target.value);
     const sendMessage = (e)=>{
-    const form = e.target;
+        const form = e.target;
     if (form.checkValidity() === false) {
       e.preventDefault();
       e.stopPropagation();
@@ -44,6 +44,7 @@ const Contact = ()=>{
             user_ID
         ).then(function(response) {
             console.log( response.status)
+            setValidated(false)
         })
       }
     }
