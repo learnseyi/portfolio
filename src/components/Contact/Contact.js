@@ -2,6 +2,7 @@ import React, { useState,useRef } from 'react';
 import {Col,Form,Button} from 'react-bootstrap';
 import { FaPaperPlane } from 'react-icons/fa';
 import emailjs from 'emailjs-com';
+import Credentials from './Credentials';
 import '../Biodata/Bio/Bio.css';
 import '../App/App.css';
 
@@ -13,11 +14,12 @@ const Contact = ()=>{
     const [state,setState] =useState(false)
     const [validated, setValidated] = useState(false);
     const formRef = useRef()
+    const {service_ID,template_ID,user_ID} = Credentials;
 
     const templateParams = {
         from_name: fname+" "+lname,
         email: email,
-        message: `from: ${email} and message:  ${message}`
+        message: `from_email: ${email} : message:  ${message}`
     }
     
     const getFname = (e)=> setFname(e.target.value);
@@ -26,7 +28,7 @@ const Contact = ()=>{
     const getMessage = (e)=> setMessage(e.target.value);
     const sendMessage = (e)=>{
     const form = e.target;
-    if (form.checkValidity(e) === false) {
+    if (form.checkValidity() === false) {
       e.preventDefault();
       e.stopPropagation();
     }
@@ -36,10 +38,10 @@ const Contact = ()=>{
         setTimeout(()=> setState(false),1000)
         setState(true)
         emailjs.send(
-            'service_zq7hd8o',
-            'template_vafux3m',
+            service_ID,
+            template_ID,
             templateParams,
-            'user_Nx1k3Q21iRxe84UcaeVXk'
+            user_ID
         ).then(function(response) {
             console.log( response.status)
         })
