@@ -8,16 +8,16 @@ import './Display.css'
 
 const Display = ({isLoading})=>{
     const {display} =useParams();
-    const data = display.charAt(0).toUpperCase()+ display.slice(1);
+
     return (
         <Card className='display-screen'style={{height:100+'vh'}}>
         {(()=>{
-            switch(data){
-                case 'Projects':
+            switch(display){
+                case 'projects':
                     return(
                         isLoading ? <Spinner className='spinner'animation="border" variant="primary" size='md'/> :<Gallery/>
                     )
-                case 'Contact':
+                case 'contact':
                     return(
                         isLoading ? <Spinner className='spinner'animation="border" variant="primary" size='md'/> : <Contact/>
                     )

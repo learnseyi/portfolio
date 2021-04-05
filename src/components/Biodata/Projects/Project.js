@@ -9,8 +9,7 @@ const Project = ()=>{
              <h1>Projects</h1>
              <div className='d-flex '>
              <h5><strong>Slim's Financial</strong></h5>&nbsp;&nbsp;&nbsp;
-             <Button size='sm' className='link'href='!#' 
-             target='_blank' rel='noreferrer'>Click here for preview</Button> 
+             <Button size='sm' className='link'href='/'>Click here for preview</Button> 
              </div>
              <ul>
                  <li>- &nbsp;Simple banking application that simulates basic user financial transactions<br/>&nbsp;&nbsp;&nbsp;built with reactjs and nodejs</li>
@@ -19,8 +18,7 @@ const Project = ()=>{
              </ul>
              <div className='d-flex '>
              <h5><strong>Facebook Clone</strong></h5>&nbsp;&nbsp;&nbsp;
-             <Button size='sm' className='link'href='!#' 
-             target='_blank' rel='noreferrer'>Click here for preview</Button> 
+             <Button size='sm' className='link'href='/'>Click here for preview</Button> 
              </div>
              <ul>
                  <li>- &nbsp;Social media application using facebook as a prototype</li>

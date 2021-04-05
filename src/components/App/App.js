@@ -92,9 +92,7 @@ const App = ()=> {
         </Col>
         <Col md={12} lg={8} className='info-screen'>
           <Route exact path='/' component={Biodata}/>
-        <Route exact path='/:display' render={props => <Display isLoading={isLoading}/> }/>
-            
-          
+          <Route  path='/:display' render={props => <Display isLoading={isLoading}/> }/>
         </Col>
       </Row>
     </Container>
