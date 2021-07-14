@@ -17,17 +17,16 @@ const Project = ()=>{
                  <li>- &nbsp;Using SQL as the server technology</li>
              </ul>
              <div className='d-flex '>
-             <h5><strong>Facebook Clone</strong></h5>&nbsp;&nbsp;&nbsp;
-             <Button size='sm' className='link'href='/'>Click for preview</Button> 
+             <h5><strong>Omnifoods</strong></h5>&nbsp;&nbsp;&nbsp;
+             <Button size='sm' className='link'href='https://omnifoods-1.netlify.app/' target="_blank" rel="noreferrer">Click for preview</Button> 
              </div>
              <ul>
-                 <li>- &nbsp;Social media application using facebook as a prototype</li>
-                 <li>- &nbsp;A full stack application with react on frontend and nodejs running on the serverside</li>
-                 <li>- &nbsp;Using MongoDB as server technology</li>
+                 <li>- &nbsp;Simple meal ordering service UI</li>
+                 <li>- &nbsp;Built with Bootstrap library and vannilla javascript</li>
              </ul>
              <div className='d-flex '>
              <h5><strong>Fashioncode</strong></h5> &nbsp;&nbsp;&nbsp;
-             <Button size='sm' className='link'href='https://learnseyi.github.io/fashion-code-v1/' target='_blank' rel='noreferrer'>Click for preview</Button> 
+             <Button size='sm' className='link'href='https://fashioncode-v2.netlify.app/' target='_blank' rel='noreferrer'>Click for preview</Button> 
              </div>
              
              <ul>
