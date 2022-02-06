@@ -56,7 +56,7 @@ const App = ()=> {
         /> */}
     <Container  fluid>
       <Row >
-        <Col md={12} lg={4} >
+        <Col md={12} lg={4} className='button-section'>
         <Card className='profile-container'>
           <div className='display'>
         <Card.Img 
