@@ -1,5 +1,5 @@
 body {
-  background: linear-gradient(45deg, #2f1c53, #a46dff, #f6d1fd);
+  /* background: linear-gradient(45deg, #2f1c53, #a46dff, #f6d1fd); */
   overflow-y: scroll;
   scrollbar-width: thin;
   scrollbar-color: #a46dff #f3f178d7;

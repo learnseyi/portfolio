@@ -51,9 +51,9 @@ const App = ()=> {
   return (
     <Router>
        <div >
-         <Particles className='particles'
+         {/* <Particles className='particles'
           params={particlesOptions}
-        />
+        /> */}
     <Container  fluid>
       <Row >
         <Col md={12} lg={4} >
