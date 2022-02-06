@@ -12,7 +12,8 @@ body {
   padding-top: 35px;
 }
 .profile-container {
-  background: transparent !important;
+  /* background: transparent !important; */
+  background: #808080;
   border-style: none;
 }
 .profile {
