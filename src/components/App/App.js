@@ -1,7 +1,7 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import React,{useRef,useState,useEffect} from 'react';
 import {Container,Row,Col,Button} from 'react-bootstrap';
-import Particles from 'react-particles-js';
+// import Particles from 'react-particles-js';
 import Display from '../Display/Display';
 import {BrowserRouter as Router,Route,Link} from 'react-router-dom';
 import {Card,ListGroupItem,ListGroup} from 'react-bootstrap';
